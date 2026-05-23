@@ -1,5 +1,8 @@
 # Bug Bounty Finder
 
+📦 **Open source · MIT:** [github.com/AnshumanAtrey/bug-bounty-finder](https://github.com/AnshumanAtrey/bug-bounty-finder)
+
+
 Find every public bug bounty / responsible disclosure program for a company or domain. Pulls in real time from:
 
 - **HackerOne** — public directory of 1000+ programs
