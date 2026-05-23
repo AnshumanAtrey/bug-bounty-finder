@@ -1,0 +1,299 @@
+================================================================================
+GEMINI NANO BANANA PROMPTS — Bug Bounty Finder logo variations
+================================================================================
+Paste each JSON block (inside its own message) into Gemini Nano Banana
+(Gemini 3 Pro Image). Generate 4-6 seeds of your favorite, pick the strongest.
+
+7 variations: 3 money-focused, 3 hacking-focused, 1 hybrid (recommended).
+Source artifact for Apify actor: bug-bounty-finder (Apify ID: IjFcONRosRNIgswHb)
+
+Target output: 1024x1024 PNG → downsize to 256x256 for Apify upload.
+Apify shows the icon in a 96-128px circular crop, so keep subject in center 80%.
+
+================================================================================
+MONEY-FOCUSED — M1: "BUG COIN"  (premium feel, hunter trophy)
+================================================================================
+
+{
+  "concept": "Bug Coin — a beetle whose body is a golden bounty coin",
+  "subject": "single stylized rhinoceros beetle silhouette, viewed from top-down, body replaced by a perfectly round gold coin embossed with a bold '$' symbol, wings outstretched symmetrically as if mid-flight",
+  "style": "flat vector icon, clean geometric shapes, minimal shading, no gradients, designed for use as an app icon",
+  "composition": "perfectly centered, beetle takes 70% of frame, square 1:1 aspect ratio, symmetrical along vertical axis",
+  "color_palette": {
+    "primary": "metallic gold #D4AF37 (coin body)",
+    "secondary": "deep navy #0A1628 (wings and outlines)",
+    "accent": "warm cream #F5E6C8 (highlight on coin)"
+  },
+  "background": "solid deep navy #0A1628 — same color as wings for high contrast against gold coin",
+  "lighting": "single subtle highlight on top-left of coin, suggesting metallic sheen",
+  "details": [
+    "thick clean outlines on wings",
+    "$ symbol bold sans-serif, embossed look",
+    "small star-shaped sparkles around coin (max 3, top-right corner)",
+    "no text other than the $ on coin"
+  ],
+  "mood": "premium, valuable, hunter trophy",
+  "aspect_ratio": "1:1",
+  "format": "256x256 PNG app icon, looks good at 64x64 thumbnail",
+  "negative_prompts": [
+    "no realistic insect rendering",
+    "no photorealism",
+    "no gradient backgrounds",
+    "no text/words other than the single $ on coin",
+    "no 3D rendering",
+    "no transparent background",
+    "no busy details"
+  ]
+}
+
+================================================================================
+MONEY-FOCUSED — M2: "BUG IN TREASURE CHEST"  (adventure vibe)
+================================================================================
+
+{
+  "concept": "Bug in Treasure Chest — open chest with a single bug at center surrounded by gold coins",
+  "subject": "front-facing wooden treasure chest, lid open at 45-degree angle, glowing yellow light from inside, single stylized beetle silhouette levitating at center of the glow, three gold coins stacked in front of the chest",
+  "style": "flat vector with light cel-shading, slight chunky outlines, video-game-icon aesthetic",
+  "composition": "chest centered, takes 80% of frame, beetle is the focal point at the glowing interior, coins overlap chest at bottom",
+  "color_palette": {
+    "primary": "rich brown #6B4423 (chest body)",
+    "secondary": "golden yellow #FFD700 (coins, glow, hinges)",
+    "accent": "dark teal #0F3438 (background)"
+  },
+  "background": "solid dark teal #0F3438 (chest and gold pop against this)",
+  "lighting": "warm glow emanating from inside the chest, illuminating the bug, soft radial light",
+  "details": [
+    "wooden plank lines visible on chest body",
+    "two brass hinges on lid",
+    "single bold padlock loop at front (unlocked, hanging open)",
+    "beetle in flat silhouette, no facial features",
+    "coins drawn as flat discs with '$' on center one"
+  ],
+  "mood": "rewarding, treasure-hunt, adventurous",
+  "aspect_ratio": "1:1",
+  "format": "256x256 PNG app icon",
+  "negative_prompts": [
+    "no photorealism",
+    "no text beyond '$' on the center coin",
+    "no sparkles/stars",
+    "no human characters",
+    "no realistic wood texture (keep it vector-flat)"
+  ]
+}
+
+================================================================================
+MONEY-FOCUSED — M3: "WANTED: BUG"  (Wild West bounty poster)
+================================================================================
+
+{
+  "concept": "Wanted: Bug — a vintage wild-west bounty poster framing a bug",
+  "subject": "sepia-toned 'WANTED' poster with curled paper edges, bold serif 'WANTED' at top, large centered stylized beetle silhouette, '$ REWARD' text at bottom, the entire poster nailed to a wooden plank with two visible nail-heads",
+  "style": "flat vector illustration with sepia/aged-paper texture rendered as solid color (no real grain), thick black outlines like a woodblock print",
+  "composition": "poster fills 85% of frame, centered, slight 2-degree rotation for playful tilt",
+  "color_palette": {
+    "primary": "aged cream #E8D5A6 (poster paper)",
+    "secondary": "deep black #1A1A1A (text, beetle silhouette, outlines)",
+    "accent": "blood red #B33A2C ($ symbol and dollar amount)"
+  },
+  "background": "solid dark wood brown #3D2817 (the plank the poster is nailed to)",
+  "lighting": "flat, no gradients, slight darker tone at poster corners for aged effect",
+  "details": [
+    "'WANTED' typed in heavy display serif at top",
+    "beetle silhouette occupies middle third of poster",
+    "'$ REWARD' in red at bottom",
+    "two black nail-heads top-left and top-right",
+    "torn-corner detail at bottom-right edge of poster"
+  ],
+  "mood": "playful, bounty-hunter, retro Americana",
+  "aspect_ratio": "1:1",
+  "format": "256x256 PNG app icon",
+  "negative_prompts": [
+    "no actual word-readability required at thumbnail size (keep text large/bold)",
+    "no realistic paper grain",
+    "no extra decorations (skulls, guns, etc.)",
+    "no photorealism"
+  ]
+}
+
+================================================================================
+HACKING-FOCUSED — H1: "CROSSHAIR BUG"  (the iconic pick — neon hacker aesthetic)
+================================================================================
+
+{
+  "concept": "Crosshair Bug — a stylized bug locked in a sniper crosshair, the hunter's reticle",
+  "subject": "perfectly centered circular sniper scope reticle with thin crosshairs extending to the edges, single stylized beetle silhouette directly under the crosshair intersection at center, small range-finder ticks around the inside of the circle (8 ticks at compass points)",
+  "style": "flat vector icon, technical/tactical aesthetic, single-weight clean lines, no shading",
+  "composition": "perfectly symmetrical, reticle takes 90% of frame, bug occupies 30% at the dead center",
+  "color_palette": {
+    "primary": "neon hacker green #00FF41 (reticle, crosshair, ticks)",
+    "secondary": "pure black #000000 (background)",
+    "accent": "white #FFFFFF (beetle silhouette)"
+  },
+  "background": "solid pure black #000000",
+  "lighting": "no gradients, flat colors only, the green should look slightly luminescent",
+  "details": [
+    "crosshair lines are 2px thin, extending past the circle slightly",
+    "8 small dash marks inside the reticle ring (one at each cardinal and inter-cardinal direction)",
+    "beetle is a top-down silhouette in pure white",
+    "no targeting numbers or text"
+  ],
+  "mood": "tactical, technical, hunter, precise",
+  "aspect_ratio": "1:1",
+  "format": "256x256 PNG app icon, must remain readable at 32x32 favicon size",
+  "negative_prompts": [
+    "no photorealism",
+    "no text or numbers",
+    "no 3D rendering",
+    "no gradients",
+    "no extra reticle complexity (keep it minimal)",
+    "no smoke/effects"
+  ]
+}
+
+================================================================================
+HACKING-FOCUSED — H2: "TERMINAL BUG"  (CRT hacker aesthetic)
+================================================================================
+
+{
+  "concept": "Terminal Bug — a retro CRT terminal screen displaying a bug between code brackets",
+  "subject": "rounded-corner CRT computer monitor in front view, glowing green screen, on the screen: '{' on the left, a stylized beetle silhouette in the middle, '}' on the right, blinking cursor '_' to the right of the closing bracket",
+  "style": "flat vector with subtle screen-glow effect, 80s/90s hacker terminal aesthetic, slight CRT curvature on screen edges",
+  "composition": "monitor takes up 90% of frame, centered, screen content takes inner 70% of monitor",
+  "color_palette": {
+    "primary": "phosphor green #00FF41 (screen text, bug, cursor)",
+    "secondary": "matte black #1A1A1A (monitor bezel and background)",
+    "accent": "subtle screen-glow halo (slightly lighter green halo around bezel)"
+  },
+  "background": "solid matte black #1A1A1A",
+  "lighting": "subtle radial glow from screen, soft green halo bleeding into the surrounding black",
+  "details": [
+    "monitor has slight inset for screen (1-2px border of darker green inside bezel)",
+    "no monitor base/stand — just the screen head",
+    "scan-line texture overlaid faintly on screen (optional, very subtle)",
+    "brackets and bug all in same neon green",
+    "cursor is a solid block, not a line"
+  ],
+  "mood": "underground hacker, retro tech, anonymous",
+  "aspect_ratio": "1:1",
+  "format": "256x256 PNG app icon",
+  "negative_prompts": [
+    "no realistic CRT rendering (keep flat)",
+    "no extra screen text or code",
+    "no actual readable code on the screen — only the {bug} symbol",
+    "no human figures",
+    "no skulls or edgy hacker tropes"
+  ]
+}
+
+================================================================================
+HACKING-FOCUSED — H3: "HOODED HUNTER WITH LENS"  (ties to NetIntel)
+================================================================================
+
+{
+  "concept": "Hooded Hunter with Lens — anonymous figure holds a magnifying glass, with a bug visible inside the lens",
+  "subject": "hooded silhouette of an anonymous figure from chest-up, face obscured by hood shadow, one hand raised holding a magnifying glass tilted slightly toward viewer, a single stylized beetle clearly visible inside the magnifying glass lens",
+  "style": "flat vector icon, clean shape silhouettes, minimal interior detail, designed to be recognizable as a tiny app icon",
+  "composition": "figure centered, magnifying glass occupies top-right of composition with bug clearly visible in lens, figure takes lower-left half",
+  "color_palette": {
+    "primary": "deep midnight blue #0B1626 (hood, figure)",
+    "secondary": "neon cyan #00E5FF (magnifying glass frame, bug)",
+    "accent": "stark white #FFFFFF (lens fill — for contrast)"
+  },
+  "background": "solid medium-dark slate #1F2937",
+  "lighting": "cool front light, slight rim light on hood edge in cyan, the lens emits a soft white glow",
+  "details": [
+    "hood casts deep shadow over face — no facial features visible, just darkness inside the hood",
+    "magnifying glass has thick cyan circular frame and a short handle",
+    "lens interior is white, with bug silhouette in midnight blue at center",
+    "figure's hand grips the magnifying glass handle visibly"
+  ],
+  "mood": "mysterious, investigative, anonymous bounty hunter",
+  "aspect_ratio": "1:1",
+  "format": "256x256 PNG app icon",
+  "negative_prompts": [
+    "no face details visible inside hood",
+    "no realistic anatomy",
+    "no skulls, weapons, or hostile imagery",
+    "no text",
+    "no photorealism",
+    "do not show full body — only chest-up"
+  ]
+}
+
+================================================================================
+HYBRID (RECOMMENDED) — B1: "BOUNTY BADGE"  (sheriff star + bug = "bounty hunter")
+================================================================================
+
+{
+  "concept": "Bounty Badge — a 5-point sheriff star (wild west bounty hunter) with a bug at the center",
+  "subject": "5-pointed sheriff/marshal star badge facing forward, single stylized beetle silhouette perfectly centered inside the star, small ball-tipped ends on each star point",
+  "style": "flat vector icon with light cel-shaded depth, badge has thick outer border, slight metallic feel from solid two-tone gold",
+  "composition": "star fills 90% of frame, perfectly centered and symmetrical, beetle takes 35% of frame at the badge center",
+  "color_palette": {
+    "primary": "polished gold #E8B923 (badge body)",
+    "secondary": "burnished gold-shadow #9B7A0A (badge inner ring + shading on points)",
+    "accent": "deep navy #0B1626 (beetle silhouette + background)"
+  },
+  "background": "solid deep navy #0B1626 (same as bug — bug is cut out from badge using background color, very clean)",
+  "lighting": "single light source top-left, slight darker tone on bottom-right of each star point for subtle 3D feel without gradients",
+  "details": [
+    "small inner ring engraved into badge surface — 80% of overall badge diameter",
+    "5 ball-tip ends on the star points",
+    "beetle silhouette is a clean cut-out (negative space) showing the navy background through it",
+    "tiny dollar-sign engraving below the bug, optional, small and subtle",
+    "no readable text on the badge"
+  ],
+  "mood": "iconic, instantly recognizable, bounty hunter, both money and hunting in one glyph",
+  "aspect_ratio": "1:1",
+  "format": "256x256 PNG app icon, must read instantly at 64x64 thumbnail",
+  "negative_prompts": [
+    "no photorealism",
+    "no actual sheriff/marshal text or numbers on badge",
+    "no realistic metal texture (keep flat with simple cel shading)",
+    "no human figures",
+    "no extra decorative flourishes"
+  ]
+}
+
+================================================================================
+PRO TIPS for Gemini Nano Banana / Gemini 3 Pro Image
+================================================================================
+
+1. Paste each JSON in a CLEAN message — no extra text around it. Nano Banana
+   parses JSON well but mixing it with natural-language prose confuses it.
+
+2. To get variations of one design, append a key after generation:
+       "seed_variation": 2     (then 3, 4, 5)
+   Pick the strongest from 4-6 seeds.
+
+3. Hex codes (#D4AF37) beat named colors (gold) for precision.
+
+4. Iterate conversationally AFTER the first generation:
+       "Make the gold more saturated, the navy slightly lighter,
+        bug silhouette larger by 15%"
+   Nano Banana 3 Pro handles refinement well.
+
+5. Generate at 1024x1024 then downsize to 256x256 for Apify upload.
+   Don't ask Nano Banana for tiny output directly — quality suffers.
+
+6. Apify shows logos in a 96-128px circular crop on the store.
+   Keep subject in the CENTER 80% safely.
+
+7. Nano Banana doesn't support transparent backgrounds — always specify
+   a solid background color in the JSON (we have).
+
+================================================================================
+TOOLKIT COHESION (optional)
+================================================================================
+
+For visual consistency across all 6 OSINT actors, consider running the
+same style guide on each upload. Color anchors to reuse:
+
+  - Navy #0B1626 / #0A1628     — main brand dark
+  - Gold #D4AF37 / #E8B923     — money / premium
+  - Cyan #00E5FF               — investigation (matches NetIntel lens vibe)
+  - Neon green #00FF41         — hacker / terminal
+
+================================================================================
+END OF PROMPTS
+================================================================================

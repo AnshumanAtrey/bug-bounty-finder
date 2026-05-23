@@ -1,0 +1,14 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Bug Bounty Finder Output",
+    "description": "Bug bounty programs and security.txt records discovered for the given query. One dataset record per program (from HackerOne, Bugcrowd) and per security.txt found, plus one summary record.",
+    "type": "object",
+    "properties": {
+        "programs": {
+            "type": "string",
+            "title": "Bug Bounty Programs & security.txt Records",
+            "description": "Each record is one of: recordType=program (matched program on HackerOne/Bugcrowd with reward range, scope policy, resolved-report count), recordType=securityTxt (parsed security.txt with contact/policy/encryption URLs), or recordType=summary (final aggregate).",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "title": "Bug Bounty Finder Configuration",
+    "description": "Find public bug bounty programs and security disclosure contacts for a company or domain.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Company / Domain",
+            "type": "string",
+            "description": "Company name or domain to search. Examples: 'shopify', 'shopify.com', 'github', 'tesla.com'. The actor searches HackerOne + Bugcrowd by the query AND fetches /.well-known/security.txt from the domain (if it looks like one).",
+            "editor": "textfield",
+            "prefill": "shopify",
+            "example": "shopify"
+        },
+        "sources": {
+            "title": "Sources to query",
+            "type": "array",
+            "description": "Pick which sources to query. Default = all enabled. Each source is independent.",
+            "editor": "select",
+            "default": ["hackerone", "bugcrowd", "security_txt"],
+            "prefill": ["hackerone", "bugcrowd", "security_txt"],
+            "items": {
+                "type": "string",
+                "enum": ["hackerone", "bugcrowd", "security_txt"],
+                "enumTitles": [
+                    "HackerOne directory",
+                    "Bugcrowd engagements",
+                    "Target /.well-known/security.txt"
+                ]
+            },
+            "uniqueItems": true,
+            "minItems": 1
+        },
+        "additionalDomains": {
+            "title": "Additional domains for security.txt",
+            "type": "array",
+            "description": "Extra domains to fetch security.txt from (e.g., subsidiaries, brand variants). Example: ['github.com', 'github.io', 'githubusercontent.com'].",
+            "editor": "stringList"
+        },
+        "limit": {
+            "title": "Max programs per source",
+            "type": "integer",
+            "description": "Cap results from HackerOne / Bugcrowd to this number (most queries return < 10).",
+            "default": 25,
+            "minimum": 1,
+            "maximum": 100,
+            "editor": "number"
+        },
+        "timeout": {
+            "title": "Request timeout (seconds)",
+            "type": "integer",
+            "description": "HTTP timeout per source.",
+            "default": 30,
+            "minimum": 5,
+            "maximum": 120,
+            "editor": "number"
+        }
+    },
+    "required": ["query"]
+}

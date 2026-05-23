@@ -1,0 +1,61 @@
+{
+    "actorSpecification": 1,
+    "name": "bug-bounty-finder",
+    "title": "Bug Bounty Finder - HackerOne + Bugcrowd + security.txt",
+    "description": "Find every public bug bounty / responsible disclosure program for a given company or domain. Aggregates HackerOne directory, Bugcrowd engagements, and target security.txt files. Daily-use tool for bug bounty hunters and security researchers.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "categories": ["DEVELOPER_TOOLS", "AUTOMATION"],
+    "input": "./INPUT_SCHEMA.json",
+    "output": "./output_schema.json",
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "Bug Bounty Programs",
+            "views": {
+                "programs": {
+                    "title": "Programs Found",
+                    "transformation": {
+                        "fields": ["query", "platform", "programName", "url", "minBounty", "maxBounty", "currency", "offersBounties", "resolvedReports", "timestamp"]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "programName":   { "label": "Program",   "format": "text" },
+                            "platform":      { "label": "Platform",  "format": "text" },
+                            "url":           { "label": "URL",       "format": "link" },
+                            "minBounty":     { "label": "Min $",     "format": "number" },
+                            "maxBounty":     { "label": "Max $",     "format": "number" },
+                            "currency":      { "label": "Currency",  "format": "text" },
+                            "offersBounties":{ "label": "Paid?",     "format": "boolean" },
+                            "resolvedReports":{ "label": "Reports",  "format": "number" }
+                        }
+                    }
+                },
+                "securityTxt": {
+                    "title": "security.txt Records",
+                    "transformation": {
+                        "fields": ["query", "domain", "contact", "policy", "encryption", "hiring", "raw", "timestamp"]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "domain":     { "label": "Domain",     "format": "text" },
+                            "contact":    { "label": "Contact",    "format": "text" },
+                            "policy":     { "label": "Policy URL", "format": "link" },
+                            "encryption": { "label": "PGP Key",    "format": "link" }
+                        }
+                    }
+                },
+                "summary": {
+                    "title": "Run Summary",
+                    "transformation": {
+                        "fields": ["recordType", "query", "programsFound", "securityTxtFound", "sources", "duration", "timestamp"]
+                    }
+                }
+            }
+        }
+    }
+}
