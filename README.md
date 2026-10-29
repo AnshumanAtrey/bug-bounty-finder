@@ -36,7 +36,7 @@ Pay-per-event:
 
 | Event | Price | When it fires |
 |---|---|---|
-| `Bounty Record` | $0.005 | Charged per dataset record: each discovered program, security.txt file, or summary row |
+| `Bounty Record` | $0.005 | Charged per dataset record: each discovered program, security.txt file, or summary row. ($0.0045 on Apify's Scale plan, $0.004 on Business and above) |
 
 ### Typical scan costs
 

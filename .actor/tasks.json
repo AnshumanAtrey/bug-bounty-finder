@@ -1,0 +1,37 @@
+{
+  "$comment": "Example tasks published on the Store by scripts/publish-tasks.mjs after every deploy (CI only). Each one is a search people type, with its own Google-indexed landing page and .md (manager/rules/SEO.md). Presets are companies with public programs.",
+  "options": {
+    "build": "latest",
+    "memoryMbytes": 1024,
+    "timeoutSecs": 300
+  },
+  "tasks": [
+    {
+      "name": "does-company-have-bug-bounty-program",
+      "title": "Does a company have a bug bounty program? Check in one run",
+      "description": "Check whether a company runs a public bug bounty or vulnerability disclosure program, on HackerOne, on Bugcrowd and in its own security.txt, with the program link, scope hints and reporting contact. Type a company name or domain; replace shopify with your target.",
+      "input": {
+        "query": "shopify",
+        "sources": ["hackerone", "bugcrowd", "security_txt"]
+      },
+      "seoTitle": "Bug Bounty Program Lookup - HackerOne, Bugcrowd",
+      "seoDescription": "Does a company run a bug bounty or disclosure program? Check HackerOne, Bugcrowd and its security.txt in one run, with program links and contacts.",
+      "inputSchemaFields": ["query", "sources", "additionalDomains"],
+      "datasetView": "programs"
+    },
+    {
+      "name": "security-txt-checker",
+      "title": "security.txt checker: where to report a site's vulnerabilities",
+      "description": "Read a domain's /.well-known/security.txt and get its security contact, disclosure policy, encryption key, acknowledgments page and expiry date, plus subsidiaries or brand domains you add. A quick way to find where to report a vulnerability.",
+      "input": {
+        "query": "github.com",
+        "sources": ["security_txt"],
+        "additionalDomains": ["githubusercontent.com"]
+      },
+      "seoTitle": "security.txt Checker - Vulnerability Disclosure",
+      "seoDescription": "Read a domain's security.txt: security contact, disclosure policy, PGP key, acknowledgments and expiry. Add brand domains to check them in one run.",
+      "inputSchemaFields": ["query", "additionalDomains"],
+      "datasetView": "securityTxt"
+    }
+  ]
+}
