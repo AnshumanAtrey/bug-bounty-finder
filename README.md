@@ -6,6 +6,13 @@ Available as an [Apify Actor](https://apify.com/anshumanatrey/bug-bounty-finder)
 
 ---
 
+**Use it from an AI assistant:**
+
+- **Claude** (claude.ai and the desktop app): [Add Bug Bounty Finder to Claude](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Bug%20Bounty%20Finder&connectorUrl=https%3A%2F%2Fmcp.apify.com%3Ftools%3Danshumanatrey%2Fbug-bounty-finder), click Continue, sign in to Apify, Allow, and ask in plain words.
+- **Claude Code:** `claude mcp add --transport http bug-bounty-finder "https://mcp.apify.com?tools=anshumanatrey/bug-bounty-finder"`, then run `/mcp` to sign in to Apify.
+- **Codex:** `codex mcp add bug-bounty-finder --url "https://mcp.apify.com?tools=anshumanatrey/bug-bounty-finder"`, then `codex mcp login bug-bounty-finder`.
+- **Any other MCP client:** `https://mcp.apify.com?tools=anshumanatrey/bug-bounty-finder`, signed in with Apify or an `Authorization: Bearer <APIFY_TOKEN>` header.
+
 ## What does it do?
 
 Takes a target domain and returns every public bug bounty program covering it. Aggregates the HackerOne public directory, Bugcrowd engagements page, and the target's own `/.well-known/security.txt` file (RFC 9116). Returns structured per-program records with platform, program URL, reward range (min/max bounty), report count where available, scope summary, and disclosure policy URL.
