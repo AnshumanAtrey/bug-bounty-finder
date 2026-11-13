@@ -168,15 +168,21 @@ async def fetch_security_txt(client: httpx.AsyncClient, domain: str) -> dict | N
     return None
 
 
+EXAMPLE_QUERY = 'shopify'  # the form's prefill: looked up when no company or domain is given, instead of failing
+
+
 async def main() -> None:
     async with Actor:
         Actor.log.info('Bug Bounty Finder starting')
 
         input_data = await Actor.get_input() or {}
-        query = (input_data.get('query') or '').strip()
-        if not query:
-            await Actor.fail(status_message='query (company name or domain) is required')
-            return
+        query = str(input_data.get('query') or '').strip()
+        # No query (a blank field passes Apify's input check): look up the example instead of failing, so the run
+        # shows what it returns (owner, 2026-11-14). Billed like any run: Apify charges the rows.
+        example = not query
+        if example:
+            query = EXAMPLE_QUERY
+            Actor.log.warning(f'No company or domain given, so this run looks up the example {EXAMPLE_QUERY}.')
 
         sources = input_data.get('sources') or ['hackerone', 'bugcrowd', 'security_txt']
         limit = int(input_data.get('limit', 25))
@@ -269,6 +275,10 @@ async def main() -> None:
         })
 
         Actor.log.info(f'Done: {len(programs)} programs + {len(sec_txt_records)} security.txt records in {wall_duration:.1f}s')
+        if example:
+            await Actor.set_status_message(
+                f'No company or domain was given, so this run looked up the example {EXAMPLE_QUERY}: '
+                f'{len(programs)} program(s), {len(sec_txt_records)} security.txt record(s). Enter your own in query.')
 
 
 if __name__ == '__main__':
